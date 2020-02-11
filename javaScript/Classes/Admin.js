@@ -11,4 +11,5 @@ class Admin extends User {
     newReservation(){
 
     }
+
 }
