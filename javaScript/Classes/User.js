@@ -7,17 +7,8 @@ class User {
         this.password = password;
         this.email = email;
     }
-
-    login(){
-
-    }
-
     logout(){
-
     }
-
     newReservation(){
-
     }
-    
 }
