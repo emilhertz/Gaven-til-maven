@@ -1,3 +1,5 @@
+//Table class is created down below.
+
 class Table {
     constructor(id, seats){
         this.id = id;
@@ -5,4 +7,3 @@ class Table {
     }
 }
 
-//test
