@@ -30,11 +30,13 @@ function buildTable(restaurants) {
         let row = document.createElement("tr");
         //runs through all the properties of the current restaurant and creates cells
         keys.forEach(function(key) {
-            cell = null;
-            if(key == "Book") {
+            let cell; //Cell variable is created in the correct scope
+            if(key === "Book") {
                 cell = document.createElement("button");
                 cell.innerHTML = key;
-                cell.onclick = console.log(restaurant.Book);
+                cell.onclick = function(){
+                    console.log(restaurant.Book);
+                }
             } else {
                 cell = document.createElement("td");
                 cell.appendChild(document.createTextNode(restaurant[key]))

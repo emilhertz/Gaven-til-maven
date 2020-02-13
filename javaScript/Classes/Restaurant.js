@@ -18,7 +18,7 @@ class Restaurant{
             Beskrivelse: this.description,
             Adresse: this.address.getAddress(),
             Siddepladser: this.seats,
-            //This returns the currents instance
+            //This returns the current restaurant-instance
             Book: this
         }
     };
