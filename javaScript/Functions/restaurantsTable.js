@@ -35,8 +35,11 @@ function buildTable(restaurants) {
                 cell = document.createElement("button");
                 cell.innerHTML = key;
                 cell.onclick = function(){
-                    console.log(restaurant.Book);
+                    bookingRestaurant(restaurant.Book);
+                    document.getElementById("restaurants").style.display = "none";
                 }
+
+
             } else {
                 cell = document.createElement("td");
                 cell.appendChild(document.createTextNode(restaurant[key]))
