@@ -11,10 +11,15 @@ function login() {
             //Gemmer bruger som logger ind i localStorage og som string
             let signedIn = JSON.stringify(listOfUsers[i]);
             localStorage.setItem("signedIn", signedIn);
-            // Åbner home.html
-            window.open("./homePage.html", "_self");
-            return
+            if(listOfUsers[i].admin === true){
+                window.open("./adminPage.html", "_self");
+                return;
+            } else {
+                //Åbner home.html
+                window.open("./homePage.html", "_self");
+                return;
+            }
         }
     }
     alert("Forkert brugernavn eller password :(")
-};
+}

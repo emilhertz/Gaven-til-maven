@@ -12,3 +12,22 @@ class User {
     newReservation(){
     }
 }
+
+//placeret midlertidigt her grundet moduler
+class Admin extends User{
+    constructor(id, firstName, lastName, userName, password, email, restaurants){
+        super(id, firstName, lastName, userName, password, email);
+        this.restaurants = [];
+        this.admin = true;
+    }
+    newRestaurant(){
+
+    }
+
+    deleteUser(){
+    }
+
+    newReservation(){
+
+    }
+}

@@ -1,4 +1,4 @@
-  //The admin class is extended from the super class User
+/*  //The admin class is extended from the super class User
 class Admin extends User {
     super(id, firstName, lastName, userName, password, email){
     }
@@ -14,3 +14,9 @@ class Admin extends User {
     }
 
 }
+
+
+ */
+
+//Adminklassen er pt. i User.js
+
