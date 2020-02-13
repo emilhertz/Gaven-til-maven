@@ -23,3 +23,8 @@ function login() {
     }
     alert("Forkert brugernavn eller password :(")
 }
+
+function logout(){
+    localStorage.removeItem("signedIn");
+    window.open("./login.html", "self");
+}
