@@ -24,5 +24,8 @@ function bookingRestaurant(restaurant) {
        bookingForm.appendChild(pax);
     bookingDiv.appendChild(bookingForm);
 
+    let date = document.createElement("input");
+    date.type = "date";
+    bookingForm.appendChild(date);
 
 }
