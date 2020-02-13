@@ -1,10 +1,12 @@
-// Table borrowed from eloquent javaScript - Overview of the restaurants.
-let test1 = [];
-
 //example restaurant initialized
-test1.push(new Restaurant(1,"noma", new Address(1, "Refshalevej", 96,1432,"København K", "Danmark"), [],10,[],"Fin restaurant:)"));
-test1.push(new Restaurant(2, "Geranium", new Address(2, "Per Henrik Lings Allé", 4, 2100, "København", "Danmark"),[],20,[],"Også en fin restaurant:)"));
-test1.push(new Restaurant(3,"Sheik Shawarma Halal", new Address(3, "Nørrebrogade", 98, 2200,"København", "Danmark"),[],30,[],"MEGET fin restaurant:)"));
+let res1 = new Restaurant(1,"noma", new Address(1, "Refshalevej", 96,1432,"København K", "Danmark"), [],10,[],"Fin restaurant:)");
+let res2 = new Restaurant(2, "Geranium", new Address(2, "Per Henrik Lings Allé", 4, 2100, "København", "Danmark"),[],20,[],"Også en fin restaurant:)");
+let res3 = new Restaurant(3,"Sheik Shawarma Halal", new Address(3, "Nørrebrogade", 98, 2200,"København", "Danmark"),[],30,[],"MEGET fin restaurant:)");
+
+//Pushing the
+let test1 = [res1.tabelPrep(), res2.tabelPrep(), res3.tabelPrep()];
+
+// Table borrowed from eloquent javaScript - Overview of the restaurants.
 
 //function which creates a html-table in which restaturants are displayed
 function buildTable(restaurants) {
@@ -28,13 +30,14 @@ function buildTable(restaurants) {
         let row = document.createElement("tr");
         //runs through all the properties of the current restaurant and creates cells
         keys.forEach(function(key) {
-            let cell = document.createElement("td");
-            //the value of the given restaurant property is appended to an individual cell
-            //if the restaurants-address is the current key, then the .getAddress() method i called on the address
-            if (key == "address"){
-                cell.appendChild(document.createTextNode(restaurant[key].getAddress()));
+            cell = null;
+            if(key == "Book") {
+                cell = document.createElement("button");
+                cell.innerHTML = key;
+                cell.onclick = console.log(restaurant.Book);
             } else {
-                cell.appendChild(document.createTextNode(restaurant[key]));
+                cell = document.createElement("td");
+                cell.appendChild(document.createTextNode(restaurant[key]))
             }
             //table cell (td) is appended to a table row
             row.appendChild(cell);

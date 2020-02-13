@@ -12,4 +12,15 @@ class Restaurant{
     addReservation(){
         //logik
     }
+    tabelPrep(){
+        return {
+            Navn: this.name,
+            Beskrivelse: this.description,
+            Adresse: this.address.getAddress(),
+            Siddepladser: this.seats,
+            //This returns the currents instance
+            Book: this
+        }
+    };
 }
+
