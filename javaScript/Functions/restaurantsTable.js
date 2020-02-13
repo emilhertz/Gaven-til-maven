@@ -39,7 +39,6 @@ function buildTable(restaurants) {
                     document.getElementById("restaurants").style.display = "none";
                 }
 
-
             } else {
                 cell = document.createElement("td");
                 cell.appendChild(document.createTextNode(restaurant[key]))
