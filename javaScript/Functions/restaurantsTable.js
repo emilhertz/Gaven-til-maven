@@ -3,8 +3,8 @@ let res1 = new Restaurant(1,"noma", new Address(1, "Refshalevej", 96,1432,"Købe
 let res2 = new Restaurant(2, "Geranium", new Address(2, "Per Henrik Lings Allé", 4, 2100, "København", "Danmark"),[],20,[],"Også en fin restaurant:)");
 let res3 = new Restaurant(3,"Sheik Shawarma Halal", new Address(3, "Nørrebrogade", 98, 2200,"København", "Danmark"),[],30,[],"MEGET fin restaurant:)");
 
-//Pushing the
-let test1 = [res1.tabelPrep(), res2.tabelPrep(), res3.tabelPrep()];
+//Pushing the example restaurants to
+let listOfRestaurants = [res1.tabelPrep(), res2.tabelPrep(), res3.tabelPrep()];
 
 // Table borrowed from eloquent javaScript - Overview of the restaurants.
 
@@ -49,4 +49,5 @@ function buildTable(restaurants) {
     return table;
 }
 
-document.getElementById("restaurants").appendChild(buildTable(test1));
+//table is appended to the document
+document.getElementById("restaurants").appendChild(buildTable(listOfRestaurants));
