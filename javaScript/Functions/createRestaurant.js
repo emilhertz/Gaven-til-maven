@@ -1,4 +1,5 @@
 function createRestaurant() {
+
     //Firstly we assign "createRestaurants" and "form" to variables
     let restaurantDiv = document.getElementById("createRestaurant");
     let createRestaurantForm = document.createElement("form");
@@ -12,13 +13,22 @@ function createRestaurant() {
 
     //We call the function
     createRestaurantForm.appendChild(restaurantName);
-
+    restaurantDiv.appendChild(createRestaurantForm);
 
     //Adress
 
     //Menu
 
-    //Seats
+    //Seats --> Dropdown
+    let createSeatDropdown = document.createElement("select");
+
+    let seatName = document.createElement("option");
+    seatName.type = "text";
+    seatName.id = "myDropdownList";
+
+    createSeatDropdown.appendChild(seatName);
+    restaurantDiv.appendChild(createSeatDropdown);
+
 
     //Reservations
 
@@ -27,13 +37,14 @@ function createRestaurant() {
     let createDescriptionForm = document.createElement("form");
 
 
-    let discriptionName = document.createElement("input");
+    let descriptionName = document.createElement("input");
     descriptionName.type = "text";
-    descriptionName.place = "Placér en beskrivelse her";
+    descriptionName.placeholder = "Placér en beskrivelse her";
     descriptionName.id = "descriptionId";
 
-    createDescriptionForm.appendChild(descriptionName);
-    restaurantName.appendChild(createRestaurantForm);
+    //createDescriptionForm.appendChild(descriptionName);
+    restaurantDiv.appendChild(descriptionName);
+
 
 
 
