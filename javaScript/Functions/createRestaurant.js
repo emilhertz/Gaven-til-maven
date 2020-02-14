@@ -1,4 +1,4 @@
-function createRestaurant(){
+function createRestaurant() {
     //Firstly we assign "createRestaurants" and "form" to variables
     let restaurantDiv = document.getElementById("createRestaurant");
     let createRestaurantForm = document.createElement("form");
@@ -13,4 +13,18 @@ function createRestaurant(){
     //We call the function
     createRestaurantForm.appendChild(restaurantName);
     restaurantDiv.appendChild(createRestaurantForm);
+
+
+    //Adress
+
+    //Menu
+
+    //Seats
+
+    //Reservations
+
+    //Description
+
+
 }
+
