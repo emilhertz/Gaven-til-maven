@@ -12,7 +12,6 @@ function createRestaurant() {
 
     //We call the function
     createRestaurantForm.appendChild(restaurantName);
-    restaurantDiv.appendChild(createRestaurantForm);
 
 
     //Adress
@@ -24,6 +23,19 @@ function createRestaurant() {
     //Reservations
 
     //Description
+
+    let createDescriptionForm = document.createElement("form");
+
+
+    let discriptionName = document.createElement("input");
+    descriptionName.type = "text";
+    descriptionName.place = "Placér en beskrivelse her";
+    descriptionName.id = "descriptionId";
+
+    createDescriptionForm.appendChild(descriptionName);
+    restaurantName.appendChild(createRestaurantForm);
+
+
 
 
 }
