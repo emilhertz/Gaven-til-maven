@@ -32,6 +32,16 @@ function createRestaurant() {
 
     //Reservations
 
+    let createReservationsForm = document.createElement("form");
+
+    let reservationName = document.createElement("input");
+
+    reservationName.type = "number";
+    reservationName.placeholder = "Type the max seats here..";
+    reservationName.id = "reservationId";
+
+    restaurantDiv.appendChild(reservationName);
+
     //Description
 
     let createDescriptionForm = document.createElement("form");
