@@ -21,12 +21,14 @@ function createRestaurant() {
 
     //Seats --> Dropdown
     let createSeatDropdown = document.createElement("select");
+    let br = document.createElement("br");
 
     let seatName = document.createElement("option");
     seatName.type = "text";
     seatName.id = "myDropdownList";
 
     createSeatDropdown.appendChild(seatName);
+    restaurantDiv.appendChild(br);
     restaurantDiv.appendChild(createSeatDropdown);
 
 
