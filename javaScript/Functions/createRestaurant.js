@@ -17,6 +17,7 @@ function createRestaurant() {
     form.appendChild(br);
 
 
+
     //Adress
 
     //Menu
@@ -25,11 +26,12 @@ function createRestaurant() {
     let createSeatDropdown = document.createElement("select");
     let seatName = document.createElement("option");
 
-    seatName.type = "text";
-    seatName.id = "myDropdownList";
+    createSeatDropdown.type = "text";
+    createSeatDropdown.id = "myDropdownList";
 
     form.appendChild(createSeatDropdown);
-    form.appendChild(br);
+    //Uses the "cloneNode()" to clone the break line.
+    form.appendChild(br.cloneNode());
 
 
     //Reservations
@@ -40,7 +42,8 @@ function createRestaurant() {
     reservationName.id = "reservationId";
 
     form.appendChild(reservationName);
-    form.appendChild(br);
+    //Uses the "cloneNode()" to clone the break line.
+    form.appendChild(br.cloneNode());
 
     //Description
     let descriptionName = document.createElement("input");
@@ -50,8 +53,6 @@ function createRestaurant() {
     descriptionName.id = "descriptionId";
 
     form.appendChild(descriptionName);
-    form.appendChild(br);
-
 
     restaurantDiv.appendChild(form);
 
