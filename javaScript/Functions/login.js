@@ -1,5 +1,5 @@
 //login metode
-function login() {
+let login = ()=> {
     let listOfUsers = JSON.parse(localStorage.getItem("storedListOfUsers"));
 
     let username = document.getElementById("loginUsername");
@@ -22,9 +22,26 @@ function login() {
         }
     }
     alert("Forkert brugernavn eller password :(")
-}
+};
 
-function logout(){
+let signedIn = JSON.parse(localStorage.getItem("signedIn"));
+
+let logout = ()=> {
     localStorage.removeItem("signedIn");
-    window.open("./login.html", "self");
-}
+    window.open("./homePage.html", "_self");
+};
+
+let loggedIn = ()=> {
+    if (signedIn !== null) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("logout").style.display = "block";
+        document.getElementById("admin").style.display = "none";
+        if (signedIn.admin === true) {
+            document.getElementById("admin").style.display = "block";
+        }
+    } else {
+        document.getElementById("login").style.display = "block";
+        document.getElementById("logout").style.display = "none";
+        document.getElementById("admin").style.display = "none";
+    }
+};

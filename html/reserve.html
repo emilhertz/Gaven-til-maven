@@ -10,16 +10,17 @@
     <script src="../javaScript/Classes/User.js"></script>
     <script src="../javaScript/Classes/Address.js"></script>
     <script src="../javaScript/Classes/Restaurant.js"></script>
+    <script src="../javaScript/Functions/login.js"></script>
 
 </head>
-<body>
-
+<body onload="loggedIn()">
 <!-- Creating of a navbar -->
 <ul>
     <li><a href="../html/homePage.html">Home</a></li>
     <li><a href="../html/reserve.html">Reservér</a></li>
-    <li><a href="../html/contact.html">Contact</a></li>
-    <div id="logout" onclick="logout()"><a href="login.html">Logout</a></div>
+    <li><div id="admin"><a href="adminPage.html">Mine restauranter</a></div></li>
+    <div id="login"><a href="login.html">Login</a></div>
+    <div id="logout" onclick="logout()">Logout</div>
 </ul>
 
 
