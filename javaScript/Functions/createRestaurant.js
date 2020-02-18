@@ -2,7 +2,8 @@ function createRestaurant() {
 
     //Firstly we assign "createRestaurants" and "form" to variables
     let restaurantDiv = document.getElementById("createRestaurant");
-    let createRestaurantForm = document.createElement("form");
+    let form = document.createElement("form");
+    let br = document.createElement("br");
 
     //Here we create a new input and manipulate the DOM-structure.
     // Afterwards we assign type, placeholder and id to the input.
@@ -12,8 +13,9 @@ function createRestaurant() {
     restaurantName.id = "restaurantId";
 
     //We call the function
-    createRestaurantForm.appendChild(restaurantName);
-    restaurantDiv.appendChild(createRestaurantForm);
+    form.appendChild(restaurantName);
+    form.appendChild(br);
+
 
     //Adress
 
@@ -21,45 +23,37 @@ function createRestaurant() {
 
     //Seats --> Dropdown
     let createSeatDropdown = document.createElement("select");
-    let br = document.createElement("br");
-
     let seatName = document.createElement("option");
+
     seatName.type = "text";
     seatName.id = "myDropdownList";
 
-    createSeatDropdown.appendChild(seatName);
-    restaurantDiv.appendChild(br);
-    restaurantDiv.appendChild(createSeatDropdown);
+    form.appendChild(createSeatDropdown);
+    form.appendChild(br);
 
 
     //Reservations
-
-    let createReservationsForm = document.createElement("form");
-
     let reservationName = document.createElement("input");
 
     reservationName.type = "number";
     reservationName.placeholder = "Type the max seats here..";
     reservationName.id = "reservationId";
 
-    restaurantDiv.appendChild(reservationName);
+    form.appendChild(reservationName);
+    form.appendChild(br);
 
     //Description
-
-    let createDescriptionForm = document.createElement("form");
-
-
     let descriptionName = document.createElement("input");
+
     descriptionName.type = "text";
     descriptionName.placeholder = "Placér en beskrivelse her";
     descriptionName.id = "descriptionId";
 
-    //createDescriptionForm.appendChild(descriptionName);
-    restaurantDiv.appendChild(descriptionName);
+    form.appendChild(descriptionName);
+    form.appendChild(br);
 
 
-
-
+    restaurantDiv.appendChild(form);
 
 }
 
