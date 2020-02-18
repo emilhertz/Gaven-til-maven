@@ -6,11 +6,21 @@
     <script src="../javaScript/Classes/User.js"></script>
     <script src="../javaScript/Classes/Reservation.js"></script>
     <script src="../javaScript/Functions/myReservations.js"></script>
+    <script src="../javaScript/Functions/login.js"></script>
+    <link rel="stylesheet" href="../css/navbar.css">
 
 
 </head>
-<body>
-
+<body onload="loggedIn()">
+<!-- Creating of a navbar -->
+<ul>
+    <li><a href="../html/homePage.html">Home</a></li>
+    <li id="reserve"><a href="../html/reserve.html">Reservér</a></li>
+    <li id="myRes"><a href="myReservations.html">Mine reservationer</a></li>
+    <li id="admin"><a href="adminPage.html">Mine restauranter</a></li>
+    <div id="login"><a href="login.html">Login</a></div>
+    <div id="logout" onclick="logout()">Logout</div>
+</ul>
 <div>
     <h1>Mine reservationer</h1>
 

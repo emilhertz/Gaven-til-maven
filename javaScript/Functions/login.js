@@ -35,13 +35,19 @@ let loggedIn = ()=> {
     if (signedIn !== null) {
         document.getElementById("login").style.display = "none";
         document.getElementById("logout").style.display = "block";
+        document.getElementById("reserve").style.display = "block";
         document.getElementById("admin").style.display = "none";
+        document.getElementById("myRes").style.display = "block";
         if (signedIn.admin === true) {
             document.getElementById("admin").style.display = "block";
+            document.getElementById("reserve").style.display = "none";
+            document.getElementById("myRes").style.display = "none";
         }
     } else {
         document.getElementById("login").style.display = "block";
         document.getElementById("logout").style.display = "none";
         document.getElementById("admin").style.display = "none";
+        document.getElementById("reserve").style.display = "none";
+        document.getElementById("myRes").style.display = "none";
     }
 };
