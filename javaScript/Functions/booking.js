@@ -1,9 +1,9 @@
 //Dummy opening hours:
 let openingTime = "12:00";
-let closingTime = "23:00";
+let closingTime = "03:00";
 
 
-function bookingRestaurant(restaurant){
+let bookingRestaurant = restaurant =>{
     // Navigates to the div where the form is made
     let bookingDiv = document.getElementById("bookingForm");
 
@@ -32,7 +32,7 @@ function bookingRestaurant(restaurant){
     // Adding text to the button
     backButton.innerHTML = "Tilbage";
     // Creating button function
-    backButton.onclick = function(){
+    backButton.onclick = ()=>{
         //The div that contains the form is cleared
         bookingDiv.innerHTML = "";
         //The tabel showing all the restaurant is made visible
@@ -70,7 +70,8 @@ function bookingRestaurant(restaurant){
     let startTime = document.createElement("input");
     startTime.type = "time";
     startTime.id = "startTime";
-    startTime.onblur = function(){
+    // Executes a callback function on blur
+    startTime.onblur = ()=> {
       if(startTime.value < openingTime){
           startTime.value = "";
           endTime.value = "";
@@ -83,7 +84,8 @@ function bookingRestaurant(restaurant){
     let endTime = document.createElement("input");
     endTime.type = "time";
     endTime.id = "endTime";
-    endTime.onblur = function() {
+    // Verifies the typed value on blur
+    endTime.onblur = ()=> {
         if (closingTime < openingTime && endTime.value > closingTime || closingTime > openingTime && closingTime < endTime.value) {
             alert(`${restaurant.name} lukker kl. ${closingTime}`);
             endTime.value = "";
