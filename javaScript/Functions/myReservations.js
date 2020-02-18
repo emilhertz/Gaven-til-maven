@@ -13,6 +13,7 @@ var reservation1 = new Reservation(1, 14.00, new User(1,"Peter","Kanin","Rabbith
 
 
 
+
 /*
 window.onload = function (myReservation) {
 
