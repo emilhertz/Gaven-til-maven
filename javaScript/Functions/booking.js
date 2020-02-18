@@ -101,5 +101,5 @@ function bookingRestaurant(restaurant){
     let date = document.createElement("input");
     date.type = "date";
     bookingForm.appendChild(date);
-    bookingDiv.appendChild(bookingForm);2
+    bookingDiv.appendChild(bookingForm);
 }
