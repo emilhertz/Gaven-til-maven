@@ -16,18 +16,26 @@ function createRestaurant() {
     form.appendChild(restaurantName);
     form.appendChild(br);
 
-
-
     //Adress
 
     //Menu
 
     //Seats --> Dropdown
     let createSeatDropdown = document.createElement("select");
-    let seatName = document.createElement("option");
+    let seatNumber = document.createElement("option");
+    let seatNumber2 = document.createElement("option");
+    let seatNumber3 = document.createElement("option");
 
     createSeatDropdown.type = "text";
     createSeatDropdown.id = "myDropdownList";
+
+    seatNumber.text = 1;
+    seatNumber2.text = 2;
+    seatNumber3.text = 3;
+
+    createSeatDropdown.add(seatNumber);
+    createSeatDropdown.add(seatNumber2);
+    createSeatDropdown.add(seatNumber3);
 
     form.appendChild(createSeatDropdown);
     //Uses the "cloneNode()" to clone the break line.
