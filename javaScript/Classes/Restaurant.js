@@ -13,6 +13,8 @@ class Restaurant{
     addReservation(){
         //logik
     }
+    //burde der ikke kunne tages højde for dette i selve tabellen?
+    //ellers skal vi have flere versioner af denne metode for de forskellige tabeller
     tabelPrep(){
         return {
             Navn: this.name,
@@ -23,5 +25,15 @@ class Restaurant{
             Book: this
         }
     };
+    tabelPrepAdmin() {
+        return {
+            Navn: this.name,
+            Beskrivelse: this.description,
+            Adresse: this.address.getAddress(),
+            Siddepladser: this.seats,
+            //This returns the current restaurant-instance
+            EditRes: this
+        }
+    }
 }
 
