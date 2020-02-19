@@ -47,7 +47,10 @@ function buildTable(restaurants) {
                 cell.onclick = ()=>{
                     alert('Mangler implementering')
                 }
-
+            } else if(key === "Afmeld") {
+                cell = document.createElement("button");
+                cell.innerHTML = key;
+                cell.onclick = AfmeldReservations;
             } else {
                 cell = document.createElement("td");
                 cell.appendChild(document.createTextNode(restaurant[key]))

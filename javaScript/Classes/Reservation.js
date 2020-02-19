@@ -8,7 +8,6 @@ class Reservation {
     }
     reservationPrep(){
         return{
-
             Tidspunkt: this.timeInterval,
             Antal: this.pax,
             Kommentarer: this.comments,
