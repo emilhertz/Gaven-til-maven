@@ -37,7 +37,7 @@ buildTable = objects => {
                 cell.innerHTML = key;
                 cell.onclick = ()=>{
                     bookingRestaurant(object.Book);
-                    document.getElementById("objects").style.display = "none";
+                    document.getElementById("restaurants").style.display = "none";
                 }
 
             } else if(key === "Rediger") {
