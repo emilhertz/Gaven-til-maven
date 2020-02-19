@@ -6,18 +6,9 @@
     <link rel="stylesheet" type="text/css" href="../css/navbar.css">
     <script src="../javaScript/Functions/login.js"></script>
 </head>
+<!--Imports navbar-->
+<%- include('layouts/navbar'); -%>
 <body onload="dynamicNavBar()">
-
-<!-- Navbar -->
-<ul>
-    <li><a href="/homePage.html">Home</a></li>
-    <li id="reserve"><a href="/reserve.html">Reservér</a></li>
-    <li id="myRes"><a href="reservations.html">Mine reservationer</a></li>
-    <li id="admin"><a href="adminPage.html">Mine restauranter</a></li>
-    <li id="login"><a href="login.html">Login</a></li>
-    <li id="logout" onclick="logout()">Logout</li>
-</ul>
-
 
 </body>
 <h1>Velkommen til GAVEN TIL MAVEN!</h1>

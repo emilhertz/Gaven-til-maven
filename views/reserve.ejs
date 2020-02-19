@@ -10,19 +10,9 @@
     <script src="../javaScript/Classes/Reservation.js"></script>
     <script src="../javaScript/Functions/login.js"></script>
 </head>
+<!--Imports navbar-->
+<%- include('layouts/navbar') -%>
 <body onload="dynamicNavBar()">
-
-<!-- Navbar -->
-<ul>
-    <li><a href="/homePage.html">Home</a></li>
-    <li id="reserve"><a href="/reserve.html">Reservér</a></li>
-    <li id="myRes"><a href="reservations.html">Mine reservationer</a></li>
-    <li id="admin"><a href="adminPage.html">Mine restauranter</a></li>
-    <div id="login"><a href="login.html">Login</a></div>
-    <div id="logout" onclick="logout()">Logout</div>
-</ul>
-
-
 <h1>Restauranter</h1>
 <div id="restaurants"></div>
 <div id="bookingForm"></div>
