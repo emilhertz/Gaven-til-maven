@@ -39,6 +39,14 @@ function buildTable(restaurants) {
                     document.getElementById("restaurants").style.display = "none";
                 }
 
+            } else if(key === "EditRes") {
+                cell = document.createElement("button");
+                cell.innerHTML = key;
+                cell.onclick = function(){
+                    bookingRestaurant(restaurant.Book);
+                    document.getElementById("restaurants").style.display = "none";
+                }
+
             } else {
                 cell = document.createElement("td");
                 cell.appendChild(document.createTextNode(restaurant[key]))
@@ -52,4 +60,4 @@ function buildTable(restaurants) {
 }
 
 //table is appended to the document
-document.getElementById("restaurants").appendChild(buildTable(listOfRestaurants));
+//document.getElementById("restaurants").appendChild(buildTable(listOfRestaurants));
