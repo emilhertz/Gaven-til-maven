@@ -6,6 +6,8 @@ let res3 = new Restaurant(3,"Sheik Shawarma Halal", new Address(3, "Nørrebrogad
 //Pushing the example restaurants to
 let listOfRestaurants = [res1.tabelPrep(), res2.tabelPrep(), res3.tabelPrep()];
 
+
+
 // Table borrowed from eloquent javaScript - Overview of the restaurants.
 
 //function which creates a html-table in which restaturants are displayed
@@ -34,17 +36,16 @@ function buildTable(restaurants) {
             if(key === "Book") {
                 cell = document.createElement("button");
                 cell.innerHTML = key;
-                cell.onclick = function(){
+                cell.onclick = ()=>{
                     bookingRestaurant(restaurant.Book);
                     document.getElementById("restaurants").style.display = "none";
                 }
 
-            } else if(key === "EditRes") {
+            } else if(key === "Rediger") {
                 cell = document.createElement("button");
                 cell.innerHTML = key;
-                cell.onclick = function(){
-                    bookingRestaurant(restaurant.Book);
-                    document.getElementById("restaurants").style.display = "none";
+                cell.onclick = ()=>{
+                    alert('Mangler implementering')
                 }
 
             } else {
@@ -58,6 +59,3 @@ function buildTable(restaurants) {
     });
     return table;
 }
-
-//table is appended to the document
-//document.getElementById("restaurants").appendChild(buildTable(listOfRestaurants));
