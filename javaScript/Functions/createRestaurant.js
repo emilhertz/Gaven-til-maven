@@ -1,5 +1,9 @@
-function createRestaurant() {
+//function that creates a dynamic table that displays an admins restaurant
 
+//logic....
+
+//function that creates the create restaurant form
+let createRestaurant = ()=> {
     //Firstly we assign "createRestaurants" and "form" to variables
     let restaurantDiv = document.getElementById("createRestaurant");
     let form = document.createElement("form");
@@ -81,5 +85,4 @@ function createRestaurant() {
 
     restaurantDiv.appendChild(form);
 
-}
-
+};

@@ -1,3 +1,4 @@
+/*Styling of navbar*/
 ul {
     list-style-type: none;
     margin: 0;
@@ -10,12 +11,26 @@ li {
     float: left;
 }
 
-li a {
+li a{
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+#logout:hover {
+    background-color: #111;
+}
+
+/*Ensures that the login and logout button floats right*/
+#login {
+    float: right;
 }
 
 #logout {
@@ -25,25 +40,8 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
     float: right;
+    cursor: pointer;
 }
 
-#logout:hover {
-    background-color: #111;
-}
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #111;
-}
-
-div a { float: right
-}
-
-div a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
 

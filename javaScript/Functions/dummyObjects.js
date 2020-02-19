@@ -1,3 +1,4 @@
+//only relevant while localStorage is still used
 if (localStorage.getItem("storedListOfUsers") == null) {
     let listOfUsers = [];
     listOfUsers.push(new User(1,"Peter","Kanin","Rabbithole", "1234", "playboy@gmail.com"));
