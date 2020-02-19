@@ -83,7 +83,6 @@ let bookingRestaurant = restaurant =>{
     startTime.id = "startTime";
     // Executes a callback function on blur
     startTime.onblur = ()=> {
-        console.log("test");
         if ((closingTime > openingTime && (closingTime < startTime.value || startTime.value < openingTime)) || (closingTime < openingTime && closingTime < startTime.value && startTime.value < openingTime)){
             startTime.value = "";
             alert(`Der kan kun reserveres borde mellem kl. ${openingTime} og kl. ${closingTime}`)
