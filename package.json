@@ -1,0 +1,25 @@
+{
+  "name": "gaven-til-maven",
+  "version": "1.0.0",
+  "description": "Dette er **Gaven til Maven**! Et reservationssystem henvendt til restauranter, som gør det muligt at administrere mange forskellige reservationer på en gang, på flere forskellige restauranter.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilhertz/Gaven-til-maven.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emilhertz/Gaven-til-maven/issues"
+  },
+  "homepage": "https://github.com/emilhertz/Gaven-til-maven#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
