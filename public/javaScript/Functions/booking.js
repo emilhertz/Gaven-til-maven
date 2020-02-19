@@ -1,4 +1,4 @@
-//Dummy opening hours:
+//Dummy Opening hours:
 let openingTime = "12:00";
 let closingTime = "01:00";
 let dummybruger =  new User(1,"Peter","Kanin","Rabbithole", "1234", "playboy@gmail.com");
