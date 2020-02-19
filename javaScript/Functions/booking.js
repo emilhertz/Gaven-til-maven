@@ -1,6 +1,6 @@
 //Dummy opening hours:
 let openingTime = "12:00";
-let closingTime = "03:00";
+let closingTime = "01:00";
 let dummybruger =  new User(1,"Peter","Kanin","Rabbithole", "1234", "playboy@gmail.com");
 let br = document.createElement("br");
 
@@ -42,6 +42,8 @@ let bookingRestaurant = restaurant =>{
     //The button is added to the div containing the form
     bookingDiv.appendChild(backButton);
 
+    bookingDiv.appendChild(br);
+    bookingDiv.appendChild(br.cloneNode());
 
     // CREATING THE FORM:
     // The form is created
@@ -66,15 +68,14 @@ let bookingRestaurant = restaurant =>{
     // Appending the selector to the form
     bookingForm.innerHTML += "Vælg antal personer: ";
     bookingForm.appendChild(pax);
-
+    bookingForm.appendChild(br.cloneNode());
 
     //Creating date selector
     let date = document.createElement("input");
     date.type = "date";
     bookingForm.innerHTML += "Vælg dag: ";
     bookingForm.appendChild(date);
-
-
+    bookingForm.appendChild(br.cloneNode());
 
     // Creating start time selector:
     let startTime = document.createElement("input");
@@ -82,39 +83,34 @@ let bookingRestaurant = restaurant =>{
     startTime.id = "startTime";
     // Executes a callback function on blur
     startTime.onblur = ()=> {
-        if (closingTime < openingTime && endTime.value > closingTime || closingTime > openingTime && closingTime < endTime.value){
-          startTime.value = "";
-          alert(`${restaurant.name} åbner først kl. ${openingTime}`);
-      } else if (startTime.value === endTime.value){
-          alert("Start- og tidspunkt kan ikke være ens")
-      }
-    };
-
-    let endTime = document.createElement("input");
-    endTime.type = "time";
-    endTime.id = "endTime";
-    // Verifies the typed value on blur
-    endTime.onblur = ()=> {
-        if (closingTime < openingTime && endTime.value > closingTime || closingTime > openingTime && closingTime < endTime.value) {
-            alert(`${restaurant.name} lukker kl. ${closingTime}`);
-            endTime.value = "";
-        } else if (closingTime > openingTime && endTime.value < openingTime){
-            alert(`${restaurant.name} åbner først kl. ${openingTime}`);
-            endTime.value = "";
-        } else if (startTime.value === endTime.value){
-            alert("Start- og tidspunkt kan ikke være ens")
+        console.log("test");
+        if ((closingTime > openingTime && (closingTime < startTime.value || startTime.value < openingTime)) || (closingTime < openingTime && closingTime < startTime.value && startTime.value < openingTime)){
+            startTime.value = "";
+            alert(`Der kan kun reserveres borde mellem kl. ${openingTime} og kl. ${closingTime}`)
         }
     };
-    bookingForm.innerHTML += "Vælg dag: ";
-    bookingForm.appendChild(startTime);
 
+
+    bookingForm.innerHTML += "Vælg tidspunkt: ";
+    bookingForm.appendChild(startTime);
+    bookingForm.appendChild(br.cloneNode());
+
+    bookingForm.appendChild(br.cloneNode());
     let comments = document.createElement("textarea");
     comments.rows = "5";
+    comments.placeholder = "Eventuelle kommentarer";
     bookingForm.appendChild(comments);
+    bookingForm.appendChild(br.cloneNode());
+
+    let submitButton = document.createElement("button");
+    submitButton.innerHTML = "Anmod reservation";
+    submitButton.onclick = (event)=>{
+        event.preventDefault();
+        console.log(new Reservation(dummybruger.id,["test"], dummybruger, pax.value, comments.value));
+    };
+    bookingForm.appendChild(submitButton);
 
 
-    let submitButton = document.createElement("input");
-    submitButton.type = "submit";
 
     bookingDiv.appendChild(bookingForm);
 
