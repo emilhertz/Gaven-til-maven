@@ -7,7 +7,7 @@ let resA3 = new Restaurant(3,"Sheik Shawarma Halal", new Address(3, "Nørrebroga
 //array with example restaurants
 let adminRes = [];
 
-adminRes.push(resA1.tabelPrepAdmin(), resA2.tabelPrepAdmin(), resA3.tabelPrepAdmin());
+adminRes.push(resA1.tablePrepAdmin(), resA2.tablePrepAdmin(), resA3.tablePrepAdmin());
 
 
 //table is appended to the document
@@ -16,7 +16,6 @@ document.getElementById("adminRestaurants").appendChild(buildTable(adminRes));
 
 
 //function that creates the create restaurant form
-/*
 createRestaurant = () => {
     //Firstly we assign "createRestaurants" and "form" to variables
     let restaurantDiv = document.getElementById("createRestaurant");
@@ -100,4 +99,3 @@ createRestaurant = () => {
     restaurantDiv.appendChild(form);
 
 };
- */

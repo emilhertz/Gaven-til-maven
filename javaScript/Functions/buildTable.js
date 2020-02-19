@@ -4,14 +4,13 @@ let res2 = new Restaurant(2, "Geranium", new Address(2, "Per Henrik Lings Allé"
 let res3 = new Restaurant(3,"Sheik Shawarma Halal", new Address(3, "Nørrebrogade", 98, 2200,"København", "Danmark"),[],30,[],"MEGET fin restaurant:)");
 
 //Pushing the example restaurants to
-let listOfRestaurants = [res1.tabelPrepBooking(), res2.tabelPrepBooking(), res3.tabelPrepBooking()];
-
+let listOfRestaurants = [res1.tablePrepBooking(), res2.tablePrepBooking(), res3.tablePrepBooking()];
 
 
 // Table borrowed from eloquent javaScript - Overview of the restaurants.
 
 //function which creates a html-table in which restaturants are displayed
-function buildTable(objects) {
+buildTable = objects => {
         let table = document.createElement("table");
         //keys which displays all of the different restaurant key's
         let keys = Object.keys(objects[0]);
@@ -50,7 +49,7 @@ function buildTable(objects) {
             } else if(key === "Afmeld") {
                 cell = document.createElement("button");
                 cell.innerHTML = key;
-                cell.onclick = AfmeldReservations;
+                cell.onclick = deleteReservation;
             } else {
                 cell = document.createElement("td");
                 cell.appendChild(document.createTextNode(object[key]))
@@ -61,4 +60,4 @@ function buildTable(objects) {
         table.appendChild(row)
     });
     return table;
-}
+};

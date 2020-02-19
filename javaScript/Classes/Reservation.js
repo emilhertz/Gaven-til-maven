@@ -6,7 +6,8 @@ class Reservation {
         this.pax = pax;
         this.comments = comments;
     }
-    tabelPrepReservation(){
+    //prep-methods prepares reservation objects to be displayed in tables
+    tablePrepReservation(){
         return{
             Tidspunkt: this.timeInterval,
             Antal: this.pax,
