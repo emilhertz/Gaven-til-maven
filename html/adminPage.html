@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <title>Admin Page</title>
     <link rel="stylesheet" href="../css/navbar.css">
-    <script src="../javaScript/Functions/createRestaurant.js"></script>
+    <script src="../javaScript/Classes/Restaurant.js"></script>
+    <script src="../javaScript/Classes/Address.js"></script>
+    <script src="../javaScript/Functions/restaurantsTable.js"></script>
     <script src="../javaScript/Functions/login.js"></script>
 </head>
-<body onload="createRestaurant(); dynamicNavBar()">
+<body onload="dynamicNavBar()">
 
 <!-- Navbar -->
 <ul>
@@ -22,6 +24,8 @@
 <h2>Dine restauranter:</h2>
 <br>
 <div id="createRestaurant"></div>
-
+<br>
+<div id="adminRestaurants"></div>
 </body>
+<script src="../javaScript/Functions/createRestaurant.js"></script>
 </html>
