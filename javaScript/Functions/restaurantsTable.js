@@ -12,18 +12,18 @@ let listOfRestaurants = [res1.tabelPrep(), res2.tabelPrep(), res3.tabelPrep()];
 
 //function which creates a html-table in which restaturants are displayed
 function buildTable(restaurants) {
-    let table = document.createElement("table");
-    //keys which displays all of the different restaurant key's
-    let keys = Object.keys(restaurants[0]);
-    //row for keys
-    let headRow = document.createElement("tr");
-    //every header is appended to a cell in the head row
-    keys.forEach(function(header) {
-        let headCell = document.createElement("th");
-        //key from keys-array is first converted to a text-node and then appended to head-table row
-        headCell.appendChild(document.createTextNode(header));
-        headRow.appendChild(headCell);
-    });
+        let table = document.createElement("table");
+        //keys which displays all of the different restaurant key's
+        let keys = Object.keys(restaurants[0]);
+        //row for keys
+        let headRow = document.createElement("tr");
+        //every header is appended to a cell in the head row
+        keys.forEach(function(header) {
+            let headCell = document.createElement("th");
+            //key from keys-array is first converted to a text-node and then appended to head-table row
+            headCell.appendChild(document.createTextNode(header));
+            headRow.appendChild(headCell);
+        });
     //headrow with all the restaurant keys is appended to the main table
     table.appendChild(headRow);
 
