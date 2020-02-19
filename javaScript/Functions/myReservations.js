@@ -11,10 +11,10 @@ var reservation4 = new Reservation(4, 20.00, new User(2,"Emil","Trækkerdreng","
 //Array med alle samlede reservationer.
 var reservationsArr = [];
 
-reservationsArr.push(reservation1.reservationPrep());
-reservationsArr.push(reservation2.reservationPrep());
-reservationsArr.push(reservation3.reservationPrep());
-reservationsArr.push(reservation4.reservationPrep());
+reservationsArr.push(reservation1.tabelPrepReservation());
+reservationsArr.push(reservation2.tabelPrepReservation());
+reservationsArr.push(reservation3.tabelPrepReservation());
+reservationsArr.push(reservation4.tabelPrepReservation());
 
 //Array med reservationer for brugeren som er logget ind.
 var loggedInReservations = [];

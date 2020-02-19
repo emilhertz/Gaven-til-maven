@@ -6,14 +6,12 @@ class Reservation {
         this.pax = pax;
         this.comments = comments;
     }
-    reservationPrep(){
+    tabelPrepReservation(){
         return{
             Tidspunkt: this.timeInterval,
             Antal: this.pax,
             Kommentarer: this.comments,
             Afmeld: this
-
-
         }
     };
 }

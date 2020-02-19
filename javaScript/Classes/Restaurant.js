@@ -15,7 +15,7 @@ class Restaurant{
     }
     //burde der ikke kunne tages højde for dette i selve tabellen?
     //ellers skal vi have flere versioner af denne metode for de forskellige tabeller
-    tabelPrep(){
+    tabelPrepBooking(){
         return {
             Navn: this.name,
             Beskrivelse: this.description,
