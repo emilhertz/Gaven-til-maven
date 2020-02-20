@@ -38,7 +38,32 @@ createRestaurant = () => {
     form.appendChild(br);
 
     //Adress
-
+    //Firstly we create all the restaurant inputs and assign it a "type" and "placeholder".
+    let restaurantStreetName = document.createElement("Input");
+    restaurantStreetName.type = "text";
+    restaurantStreetName.placeholder = "Eksempelgade";
+    let restaurantStreetNumber = document.createElement("input");
+    restaurantStreetNumber.type = "number";
+    restaurantStreetNumber.placeholder = "69";
+    let restaurantZipCode = document.createElement("input");
+    restaurantZipCode.type = "number";
+    restaurantZipCode.placeholder = "0000";
+    let restaurantCity = document.createElement("input");
+    restaurantCity.type = "text";
+    restaurantCity.placeholder = "Examplecity";
+    let restaurantCountry = document.createElement("input");
+    restaurantCountry.type = "text";
+    restaurantCountry.placeholder = "ExampleCountry";
+    let restaurantAddressText = document.createElement("p");
+    let restaurantAddressTextNode = "Adresseoplysninger";
+    new Address(0, restaurantStreetName.value, restaurantStreetNumber.value, restaurantZipCode.value, restaurantCity.value, restaurantCountry.value);
+    restaurantAddressText.appendChild(document.createTextNode(restaurantAddressTextNode));
+    form.appendChild(restaurantAddressText);
+    form.appendChild(restaurantStreetName);
+    form.appendChild(restaurantStreetNumber);
+    form.appendChild(restaurantZipCode);
+    form.appendChild(restaurantCity);
+    form.appendChild(restaurantCountry);
     //Menu
 
     //Seats --> Dropdown
