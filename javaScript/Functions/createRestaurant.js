@@ -38,6 +38,37 @@ createRestaurant = () => {
     form.appendChild(br);
 
     //Adress
+    //Firstly we create all the restaurant inputs and assign it a "type" and "placeholder".
+    let restaurantStreetName = document.createElement("Input");
+    restaurantStreetName.type = "text";
+    restaurantStreetName.placeholder = "Eksempelgade";
+    let restaurantStreetNumber = document.createElement("input");
+    restaurantStreetNumber.type = "number";
+    restaurantStreetNumber.placeholder = "69";
+    let restaurantZipCode = document.createElement("input");
+    restaurantZipCode.type = "number";
+    restaurantZipCode.placeholder = "0000";
+    let restaurantCity = document.createElement("input");
+    restaurantCity.type = "text";
+    restaurantCity.placeholder = "Examplecity";
+    let restaurantCountry = document.createElement("input");
+    restaurantCountry.type = "text";
+    restaurantCountry.placeholder = "ExampleCountry";
+
+    let restaurantAddressText = document.createElement("p");
+    let restaurantAddressTextNode = "Adresseoplysninger";
+
+
+    new Address(0, restaurantStreetName.value, restaurantStreetNumber.value, restaurantZipCode.value, restaurantCity.value, restaurantCountry.value);
+
+    restaurantAddressText.appendChild(document.createTextNode(restaurantAddressTextNode));
+    form.appendChild(restaurantAddressText);
+
+    form.appendChild(restaurantStreetName);
+    form.appendChild(restaurantStreetNumber);
+    form.appendChild(restaurantZipCode);
+    form.appendChild(restaurantCity);
+    form.appendChild(restaurantCountry);
 
     //Menu
 
@@ -83,19 +114,18 @@ createRestaurant = () => {
     form.appendChild(br.cloneNode());
 
     //Description
-    let descriptionName = document.createElement("input");
+    let descriptionName = document.createElement("textarea");
     let description = document.createElement("p");
-    let descriptionText = "Kort beskrivelse af restauranten";
+    let descriptionText = "Andre kommentarer kan skrives nedenfor";
 
-    descriptionName.type = "text";
-    descriptionName.placeholder = "Placér en beskrivelse her";
-    descriptionName.id = "descriptionId";
-
+    descriptionName.rows = "5";
+    descriptionName.placeholder = "Eventuelle kommentarer";
 
     description.appendChild(document.createTextNode(descriptionText));
     form.appendChild(description);
     form.appendChild(descriptionName);
+    form.appendChild(br.cloneNode());
 
-    restaurantDiv.appendChild(form);
+restaurantDiv.appendChild(form);
 
 };
