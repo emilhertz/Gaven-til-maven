@@ -2,9 +2,8 @@
 if (localStorage.getItem("storedListOfUsers") == null) {
     let listOfUsers = [];
     listOfUsers.push(new User(1,"Peter","Kanin","Rabbithole", "1234", "playboy@gmail.com"));
-    listOfUsers.push(new User(2,"Emil","Trækkerdreng","Grindrboi", "<=3", "hola@gmail.com"));
     //admin-users
-    listOfUsers.push(new Admin(3, "Peder", "Legend", "Stallion", "Julemand", "hackerboi@peder.dk", "Peder Oxe"));
+    listOfUsers.push(new Admin(3, "Peter", "Legend", "Stallion", "Julemand", "hackerboi@peter.dk", "Peder Oxe"));
 
     //listOfUsers stringifies, så de kan tilknyttes localStorage
     let listOfUsersString = JSON.stringify(listOfUsers);
