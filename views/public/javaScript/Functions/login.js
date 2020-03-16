@@ -12,11 +12,11 @@ let login = ()=> {
             let signedIn = JSON.stringify(listOfUsers[i]);
             localStorage.setItem("signedIn", signedIn);
             if(listOfUsers[i].admin === true){
-                window.open("./adminPage.html", "_self");
+                window.open("/admin", "_self");
                 return;
             } else {
                 //opens home.html
-                window.open("./homePage.html", "_self");
+                window.open("/", "_self");
                 return;
             }
         }
@@ -27,7 +27,7 @@ let login = ()=> {
 //function which deletes the signed in user from localStorage and returns user to home-page
 let logout = ()=> {
     localStorage.removeItem("signedIn");
-    window.open("./homePage.html", "_self");
+    window.open("/", "_self");
 };
 
 //asigns the signed in user to a global-varible
