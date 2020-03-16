@@ -1,6 +1,10 @@
 //import external modules
 const express = require('express');
 const path = require('path');
+const mongoose = require('mongoose');
+
+//Connect to database
+mongoose.connect('mongodb://localhost/gaventilmaven', {useNewUrlParser: true, useUnifiedTopology: true})
 
 //import local modules
 const homePageController = require('./controllers/homePage');
@@ -14,7 +18,7 @@ const app = new express();
 
 //defines a port
 app.listen(4000, (req,res)=>{
-    console.log('App listening on port 4000');
+    console.log('Emil er guldjomfru 4000');
 });
 
 //defines where all the static files are stored
