@@ -4,9 +4,13 @@ const User = require('../models/User');
 module.exports = async (req, res)=>{
     try{
     await User.create({ ...req.body, isAdmin: false });
-    res.redirect('/login')
+    await res.json({
+        created: true
+    })
     } catch (e) {
         console.log(e);
-        res.redirect('/create')
+        await res.json({
+            created: false
+        })
     }
 };
