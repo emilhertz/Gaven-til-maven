@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 mongoose.connect('mongodb://localhost/gaventilmaven', {useNewUrlParser: true, useUnifiedTopology: true});
 
 //import local modules
-const storeUserController = require('./controllers/storeUser');
+const storeUserController = require('./controllers/storeUserController');
 
 //initialize new express app
 const app = new express();
@@ -18,12 +18,21 @@ app.listen(4000, (req,res)=>{
     console.log('Listening to port 4000...');
 });
 
-//defines where all the static files are stored
-app.use(express.static(path.join(__dirname, '../views', 'public')));
-
 //middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+//Thomas' trylledrik. Tillader samtlige CORS
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', '*');
+    if(req.method === 'OPTIONS') {
+        res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
+        res.status(200).json({})
+    }
+    next()
+});
+
 //create
 app.post('/user/create', storeUserController);
+
