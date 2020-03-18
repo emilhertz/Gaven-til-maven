@@ -27,7 +27,7 @@ async function storeUser() {
     const res = await fetch('http://localhost:4000/user/create', options)
         //Procedure if no error
         .then((response)=>{return response.json()})
-        //Procedure if error
+        //Procedure if fetch error (e.g. API not reachable)
         .catch((e)=>{return console.log(e)});
 
     if(res.created === true){
