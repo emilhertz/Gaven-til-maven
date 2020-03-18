@@ -3,8 +3,7 @@ const User = require('../models/User');
 
 module.exports = async (req, res)=>{
     try{
-        // is admin ikke restfull
-    await User.create({ ...req.body, isAdmin: false });
+    await User.create({ ...req.body});
     await res.send({
         created: true
     })

@@ -12,8 +12,8 @@ async function storeUser() {
         lastName: lastName.value,
         username: username.value,
         password: password.value,
-        email: email.value
-        //isAdmin: false
+        email: email.value,
+        isAdmin: false
     };
 
     //Defining request options
