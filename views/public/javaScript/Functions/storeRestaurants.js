@@ -1,19 +1,35 @@
+/*
 async function storeRestaurant() {
     //Navigating to inputs and saving them to variables
-    const  = document.getElementById("firstName");
-    const lastName = document.getElementById("lastName");
-    const username = document.getElementById("username");
-    const password = document.getElementById("password");
-    const email = document.getElementById("email");
+    const restaurantId = document.getElementById("restaurantId");
+    const StreetNameId = document.getElementById("StreetNameId");
+    const StreetNumberId = document.getElementById("StreetNumberId");
+    const ZipCodeId = document.getElementById("ZipCodeId");
+    const CityId = document.getElementById("CityId");
+    const CountryId = document.getElementById("CountryId");
+    const myDropdownList = document.getElementById("myDropdownListId");
+    const reservationId = document.getElementById("reservationId");
+    const descriptionTextId= document.getElementById("descriptionTextId");
 
     //Defining req.body content
     const data = {
-        firstName: firstName.value,
-        lastName: lastName.value,
-        username: username.value,
-        password: password.value,
-        email: email.value,
-        isAdmin: false
+        name: reservationId.value,
+        address: {
+            streetName: StreetNameId.value ,
+
+            streetNumber: StreetNumberId.value,
+
+            zipCode: ZipCodeId.value,
+
+            city: CityId.value,
+
+            country: CountryId.value
+        }
+
+        description: descriptionTextId.value,
+
+        adminId: "5e71f50a3e37f17e53a92ca7"
+
     };
 
     //Defining request options
@@ -24,7 +40,7 @@ async function storeRestaurant() {
     };
 
     //Request that saves respond in variable
-    const res = await fetch('http://localhost:4000/user/create', options)
+    const res = await fetch('http://localhost:4000/restaurant/create', options)
     //Procedure if no error
         .then((response)=>{return response.json()})
         //Procedure if fetch error (e.g. API not reachable)
@@ -37,3 +53,6 @@ async function storeRestaurant() {
         alert(`${res.errors}`);
     }
 }
+
+
+ */
