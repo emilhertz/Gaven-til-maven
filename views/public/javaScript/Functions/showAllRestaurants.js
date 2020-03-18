@@ -26,14 +26,13 @@ showRestaurant = async() =>{
       Book: restaurant
     }
 
-  })
-  console.log(rdyForTableRestaurants)
-  console.log(restaurants)
+  });
+  console.log(rdyForTableRestaurants);
+  console.log(restaurants);
   //table is appended to the document
-  restaurantsDiv = document.getElementById("restaurants")
-  restaurantsDiv.appendChild(buildTable(rdyForTableRestaurants))
-
+  restaurantsDiv = document.getElementById("restaurants");
+  restaurantsDiv.appendChild(buildTable(rdyForTableRestaurants));
 };
 
 
-showRestaurant()
+showRestaurant();

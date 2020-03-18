@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 //Connect to database
-mongoose.connect('mongodb://localhost/gaventilmaven', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://emilhertz:toQfuf-qebxi6-jynqic@gaventilmaven-lbpln.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 
 //import local modules
 const storeUserController = require('./controllers/storeUserController');
