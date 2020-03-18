@@ -1,7 +1,7 @@
 showRestaurant = async() =>{
   //Defining request options
   const options = {
-    method: "GET",
+    method: "GET"
   };
 
   //Request that saves respond in variable
@@ -16,6 +16,24 @@ showRestaurant = async() =>{
 
   //return restaurants
   let restaurants = res.restaurants;
+  let rdyForTableRestaurants = restaurants.map((restaurant)=> {
+     return {
+      Navn: restaurant.name,
+      Beskrivelse: restaurant.description,
+      Addresse: `${restaurant.address.streetName} ${restaurant.address.streetNumber}, ${restaurant.address.zipCode} ${restaurant.address.city} ${restaurant.address.country}`,
+      Siddepladser: 10,
+      //same as when we used "this"
+      Book: restaurant
+    }
 
-  console.log(res.restaurants);
+  })
+  console.log(rdyForTableRestaurants)
+  console.log(restaurants)
+  //table is appended to the document
+  restaurantsDiv = document.getElementById("restaurants")
+  restaurantsDiv.appendChild(buildTable(rdyForTableRestaurants))
+
 };
+
+
+showRestaurant()
