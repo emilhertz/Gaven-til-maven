@@ -42,24 +42,26 @@ createRestaurant = () => {
     let restaurantStreetName = document.createElement("Input");
     restaurantStreetName.type = "text";
     restaurantStreetName.placeholder = "Eksempelgade";
+    restaurantStreetName.id = "StreetNameId";
     let restaurantStreetNumber = document.createElement("input");
     restaurantStreetNumber.type = "number";
     restaurantStreetNumber.placeholder = "69";
+    restaurantStreetNumber.id = "StreetNumberId";
     let restaurantZipCode = document.createElement("input");
     restaurantZipCode.type = "number";
     restaurantZipCode.placeholder = "0000";
+    restaurantZipCode.id = "ZipCodeId";
     let restaurantCity = document.createElement("input");
     restaurantCity.type = "text";
     restaurantCity.placeholder = "Examplecity";
+    restaurantCity.id = "CityId";
     let restaurantCountry = document.createElement("input");
     restaurantCountry.type = "text";
     restaurantCountry.placeholder = "ExampleCountry";
+    restaurantCountry.id = "CountryId";
 
     let restaurantAddressText = document.createElement("p");
     let restaurantAddressTextNode = "Adresseoplysninger";
-
-
-    new Address(0, restaurantStreetName.value, restaurantStreetNumber.value, restaurantZipCode.value, restaurantCity.value, restaurantCountry.value);
 
     restaurantAddressText.appendChild(document.createTextNode(restaurantAddressTextNode));
     form.appendChild(restaurantAddressText);
@@ -100,23 +102,22 @@ createRestaurant = () => {
 
     //Reservations
     let reservationName = document.createElement("input");
-    let maxGuests = document.createElement("p");
-    let maxGuestsText = "Max antal gæster: ";
 
     reservationName.type = "number";
     reservationName.placeholder = "Type the max seats here..";
     reservationName.id = "reservationId";
 
-    maxGuests.appendChild(document.createTextNode(maxGuestsText));
-    form.appendChild(maxGuests);
     form.appendChild(reservationName);
     //Uses the "cloneNode()" to clone the break line.
     form.appendChild(br.cloneNode());
 
     //Description
     let descriptionName = document.createElement("textarea");
+    descriptionName.id = "descriptionNameId";
     let description = document.createElement("p");
+    description.id = "descriptionId";
     let descriptionText = "Andre kommentarer kan skrives nedenfor";
+    descriptionText.id = "descriptionTextId";
 
     descriptionName.rows = "5";
     descriptionName.placeholder = "Eventuelle kommentarer";
