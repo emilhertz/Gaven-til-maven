@@ -10,7 +10,7 @@
     <script src="public/javaScript/Classes/Reservation.js"></script>
     <script src="public/javaScript/Functions/login.js"></script>
 </head>
-<body onload="dynamicNavBar()">
+<body onload="dynamicNavBar(); ">
 
 <!-- Navbar -->
 <ul>
@@ -34,6 +34,8 @@
 
 <!--Script which executes buildTable function-->
 <script>
+
+
     //table is appended to the document
     document.getElementById("restaurants").appendChild(buildTable(listOfRestaurants));
 </script>

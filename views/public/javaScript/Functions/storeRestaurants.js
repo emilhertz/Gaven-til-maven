@@ -1,35 +1,26 @@
-/*
+// Hele storeRestaurant
 async function storeRestaurant() {
     //Navigating to inputs and saving them to variables
-    const restaurantId = document.getElementById("restaurantId");
-    const StreetNameId = document.getElementById("StreetNameId");
-    const StreetNumberId = document.getElementById("StreetNumberId");
-    const ZipCodeId = document.getElementById("ZipCodeId");
-    const CityId = document.getElementById("CityId");
-    const CountryId = document.getElementById("CountryId");
-    const myDropdownList = document.getElementById("myDropdownListId");
-    const reservationId = document.getElementById("reservationId");
-    const descriptionTextId= document.getElementById("descriptionTextId");
+    const restaurantName = document.getElementById("name");
+    const streetName = document.getElementById("streetName");
+    const streetNumber = document.getElementById("streetNumber");
+    const zipCode = document.getElementById("zipCode");
+    const city = document.getElementById("city");
+    const country = document.getElementById("country");
+    const description= document.getElementById("description");
 
     //Defining req.body content
     const data = {
-        name: reservationId.value,
+        name: restaurantName.value,
         address: {
-            streetName: StreetNameId.value ,
-
-            streetNumber: StreetNumberId.value,
-
-            zipCode: ZipCodeId.value,
-
-            city: CityId.value,
-
-            country: CountryId.value
-        }
-
-        description: descriptionTextId.value,
-
-        adminId: "5e71f50a3e37f17e53a92ca7"
-
+            streetName: streetName.value ,
+            streetNumber: streetNumber.value,
+            zipCode: zipCode.value,
+            city: city.value,
+            country: country.value
+        },
+        description: description.value,
+        adminId: "5e72239d4fed5f399a5f986b"
     };
 
     //Defining request options
@@ -41,18 +32,15 @@ async function storeRestaurant() {
 
     //Request that saves respond in variable
     const res = await fetch('http://localhost:4000/restaurant/create', options)
-    //Procedure if no error
+        //Procedure if no error
         .then((response)=>{return response.json()})
         //Procedure if fetch error (e.g. API not reachable)
         .catch((e)=>{return console.log(e)});
 
     if(res.created === true){
-        alert("Bruger oprettet!");
-        window.open("login.html", "_self");
+        alert("Restaurant oprettet!");
+        window.open("homePage.html", "_self");
     } else {
         alert(`${res.errors}`);
     }
 }
-
-
- */

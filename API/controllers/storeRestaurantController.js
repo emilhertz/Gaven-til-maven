@@ -1,13 +1,9 @@
 const mongoose = require('mongoose');
 const Restaurant = require('../models/Restaurant');
-/*
-const User = require('../models/User');
 
-
- */
 module.exports = async (req, res)=>{
     try{
-        await Restaurant.create({ ...req.body});
+        await Restaurant.create({ ...req.body });
         await res.send({
             created: true
         })

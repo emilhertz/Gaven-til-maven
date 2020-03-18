@@ -29,11 +29,14 @@
 <h3>Opret restaurant:</h3>
 <div id="createRestaurant">
     <form>
-        <input type="text" id="name">
-        <input type="text" id="name">
-        <input type="text">
-        <input type="text">
-        <input type="text">
+        <input type="text" id="name"  placeholder="Restaurant navn">
+        <input type="text" id="streetName" placeholder="Vejnavn">
+        <input type="text" id="streetNumber" placeholder="Vejnummer">
+        <input type="text" id="zipCode" placeholder="Postnummer">
+        <input type="text" id="city" placeholder="By">
+        <input type="text" id="country" placeholder="Land">
+        <textarea id="description" placeholder="Beskrivelse af restaurant"></textarea>
+        <input type="button" onclick="storeRestaurant()" value="Opret restaurant">
     </form>
 </div>
 <br>
@@ -42,7 +45,5 @@
 
 <script src="public/javaScript/Functions/buildTable.js"></script>
 <script src="public/javaScript/Functions/createRestaurant.js"></script>
-
-
-
+<script src="public/javaScript/Functions/storeRestaurants.js"></script>
 </html>

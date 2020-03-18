@@ -9,8 +9,8 @@ mongoose.connect('mongodb://localhost/gaventilmaven', {useNewUrlParser: true, us
 
 //import local modules
 const storeUserController = require('./controllers/storeUserController');
-
 const storeRestaurantController = require('./controllers/storeRestaurantController');
+const getRestaurantController = require('./controllers/getRestaurantController');
 
 //initialize new express app
 const app = new express();
@@ -35,6 +35,8 @@ app.use((req, res, next) => {
     }
     next()
 });
+//read
+app.get('/restaurant/get', getRestaurantController);
 
 //create
 app.post('/user/create', storeUserController);
