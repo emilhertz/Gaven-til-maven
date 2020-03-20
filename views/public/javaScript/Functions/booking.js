@@ -12,7 +12,7 @@ let bookingRestaurant = restaurant =>{
     // Creating a new paragraph
     let restaurantParagraph = document.createElement("p");
     // Creating a string for the paragraph
-    let restaurantString = `Bookning til følgende restaurant: ${restaurant.name}, ${restaurant.address.getAddress()}`;
+    let restaurantString = `Bookning til følgende restaurant: ${restaurant.name}, ${restaurant.address.streetName} ${restaurant.address.streetNumber}, ${restaurant.address.zipCode} ${restaurant.address.city} ${restaurant.address.country}`;
     // Turning restaurantString into a text node and appending it to the paragraph
     restaurantParagraph.appendChild(document.createTextNode(restaurantString));
     bookingDiv.appendChild(restaurantParagraph);

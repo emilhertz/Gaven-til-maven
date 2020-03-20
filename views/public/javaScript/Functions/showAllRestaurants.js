@@ -27,8 +27,6 @@ showRestaurant = async() =>{
     }
 
   });
-  console.log(rdyForTableRestaurants);
-  console.log(restaurants);
   //table is appended to the document
   restaurantsDiv = document.getElementById("restaurants");
   restaurantsDiv.appendChild(buildTable(rdyForTableRestaurants));
