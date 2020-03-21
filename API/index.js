@@ -12,6 +12,7 @@ mongoose.connect('mongodb+srv://emilhertz:toQfuf-qebxi6-jynqic@gaventilmaven-lbp
 const storeUserController = require('./controllers/storeUserController');
 const storeRestaurantController = require('./controllers/storeRestaurantController');
 const getRestaurantController = require('./controllers/getRestaurantController');
+const getUserController = require('./controllers/getUserController');
 
 //initialize new express app
 const app = new express();
@@ -35,7 +36,7 @@ app.use((req, res, next) => {
 //read
 app.get('/restaurant/get', getRestaurantController);
 
-app.get('/user/get',getUserController);
+app.get('/user/get', getUserController);
 
 //create
 app.post('/user/create', storeUserController);
