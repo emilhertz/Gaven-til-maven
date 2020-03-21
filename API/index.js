@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const jwt = require('jsonwebtoken');
 
 //Connect to database
 mongoose.connect('mongodb+srv://emilhertz:toQfuf-qebxi6-jynqic@gaventilmaven-lbpln.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
@@ -34,8 +35,11 @@ app.use((req, res, next) => {
 //read
 app.get('/restaurant/get', getRestaurantController);
 
+app.get('/user/get',getUserController);
+
 //create
 app.post('/user/create', storeUserController);
 
 app.post('/restaurant/create', storeRestaurantController);
+
 
