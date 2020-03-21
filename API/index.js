@@ -24,17 +24,13 @@ app.listen(4000, (req,res)=>{
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-
 //Thomas' trylledrik. Tillader samtlige CORS
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', '*');
-    if(req.method === 'OPTIONS') {
-        res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
-        res.status(200).json({})
-    }
     next()
 });
+
 //read
 app.get('/restaurant/get', getRestaurantController);
 
