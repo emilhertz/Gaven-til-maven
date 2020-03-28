@@ -9,7 +9,6 @@ module.exports = async (req, res)=>{
         })
     } catch (e) {
         await res.send({
-            created: false,
             errors: e.message
         })
     }

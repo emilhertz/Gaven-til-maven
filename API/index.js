@@ -11,7 +11,7 @@ mongoose.connect('mongodb+srv://emilhertz:toQfuf-qebxi6-jynqic@gaventilmaven-lbp
 //import local modules
 const storeUserController = require('./controllers/storeUserController');
 const storeRestaurantController = require('./controllers/storeRestaurantController');
-const getRestaurantController = require('./controllers/getRestaurantController');
+const getRestaurantsController = require('./controllers/getRestaurantsController');
 const getUserController = require('./controllers/getUserController');
 
 //initialize new express app
@@ -34,9 +34,9 @@ app.use((req, res, next) => {
 });
 
 //read
-app.get('/restaurant/get', getRestaurantController);
+app.get('/restaurant', getRestaurantsController);
 
-app.get('/user/get', getUserController);
+app.get('/user', getUserController);
 
 //create
 app.post('/user/create', storeUserController);

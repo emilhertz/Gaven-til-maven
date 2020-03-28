@@ -5,7 +5,7 @@ showRestaurant = async() =>{
   };
 
   //Request that saves respond in variable
-  const res = await fetch('http://localhost:4000/restaurant/get', options)
+  const res = await fetch('http://localhost:4000/restaurant', options)
       //Procedure if no error
       .then((response)=>{return response.json()})
       //Procedure if fetch error (e.g. API not reachable)
