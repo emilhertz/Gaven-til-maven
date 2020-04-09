@@ -43,4 +43,4 @@ app.post('/user/create', storeUserController);
 
 app.post('/restaurant/create', storeRestaurantController);
 
-
+app.post('/login', loginController);
