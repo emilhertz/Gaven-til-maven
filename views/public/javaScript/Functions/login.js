@@ -4,9 +4,80 @@ let login = async ()=> {
     let username = document.getElementById("loginUsername");
     let password = document.getElementById("loginPassword");
 
-    const user = await
+    const data = {
+        username: username.value,
+        password: password.value
+    };
+
+    //Defining request options
+    const options = {
+        method: "POST",
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    };
+
+    //Request that saves respond in variable
+   await fetch('http://localhost:4000/login', options)
+        //Procedure if no error
+        .then((response)=>{
+
+            //If the username and passwords are true, then we will recieve the auth 200.
+            if (response.status == 200){
+                //Magi fra stack overflow
+                response.json().then(body =>{alert(body.message)});
+                //
+               window.open("reserve.html", "_self");
+
+            }
+            // Alerts the error message if something goes wrong.
+            else{
+                response.json().then(body =>{alert(body.message)});
+            }
+
+        })
+        //Procedure if fetch error (e.g. API not reachable)
+        .catch((e)=>{return console.log(e)});
 
 
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+    const user = await;
 
     //for-loop which uses operators to decide which user to sign in
     for (let i=0; i < listOfUsers.length; i++) {
@@ -26,3 +97,7 @@ let login = async ()=> {
     }
     alert("Forkert brugernavn eller password :(")
 };
+
+
+
+ */

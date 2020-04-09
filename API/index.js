@@ -13,6 +13,7 @@ const storeUserController = require('./controllers/storeUserController');
 const storeRestaurantController = require('./controllers/storeRestaurantController');
 const getRestaurantsController = require('./controllers/getRestaurantsController');
 const getUserController = require('./controllers/getUserController');
+const loginController = require('./controllers/loginController');
 
 //initialize new express app
 const app = new express();

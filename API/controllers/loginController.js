@@ -23,9 +23,11 @@ module.exports = (req, res) => {
                     return res.status(200).json({
                         message: 'Auth Successful'
                     })
-
                 }
+                return res.status(401).json( {
+                    message: "Auth failed"
+                })
             })
 
         })
-}
+};
