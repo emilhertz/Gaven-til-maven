@@ -35,6 +35,7 @@ let login = async ()=> {
             }
 
         })
+       
         //Procedure if fetch error (e.g. API not reachable)
         .catch((e)=>{return console.log(e)});
 
