@@ -4,7 +4,7 @@ let login = async ()=> {
     let username = document.getElementById("loginUsername");
     let password = document.getElementById("loginPassword");
 
-    const data = {
+    const body = {
         username: username.value,
         password: password.value
     };
@@ -13,7 +13,7 @@ let login = async ()=> {
     const options = {
         method: "POST",
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(data)
+        body: JSON.stringify(body)
     };
 
     //Request that saves respond in variable
@@ -22,12 +22,17 @@ let login = async ()=> {
         .then((response)=>{
 
             //If the username and passwords are true, then we will recieve the auth 200.
-            if (response.status == 200){
+            if (response.status === 200) {
                 //Magi fra stack overflow
-                response.json().then(body =>{alert(body.message)});
-                //
-               window.open("reserve.html", "_self");
-
+                response.json().then(body => {
+                    alert(body.message)
+                    //check if we need to write "true"
+                    if(body.isAdmin){
+                        window.open("adminPage.html", "_self")
+                    } else {
+                        window.open("reserve.html", "_self");
+                    }
+                });
             }
             // Alerts the error message if something goes wrong.
             else{
